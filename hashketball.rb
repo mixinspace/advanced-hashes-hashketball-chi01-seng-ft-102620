@@ -136,7 +136,7 @@ def num_points_scored(player)
         return player_element[:points]
       end
     end
-  end
+  #end
 end
 
 
