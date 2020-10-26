@@ -141,7 +141,7 @@ end
 
 
 def shoe_size(player)
-  game_hash.each do |key_home, value|
+  game_hash.each do |key, value|
     value[:players].each do |player_element|
 
       if player_element[:player_name] == player
@@ -153,7 +153,7 @@ end
 
 
 def team_colors(team_name)
-    game_hash.each do |key_home, value|
+    game_hash.each do |key, value|
 
       if value[:team_name] == team_name
         return value[:colors]
@@ -165,7 +165,7 @@ end
 def team_names
   team_n_array = []
 
-  game_hash.each do |key_home, value|
+  game_hash.each do |key, value|
     value.find do
 
       if value[:team_name]
@@ -180,7 +180,7 @@ end
 def player_numbers(team_name)
     jersey_n_array = []
 
-  game_hash.each do |key_home, value|
+  game_hash.each do |key, value|
     value.find do
 
       if value[:team_name] == team_name
@@ -198,7 +198,7 @@ end
 def player_stats(name)
       player_stats = {}
 
-  game_hash.each do |key_home, value|
+  game_hash.each do |key, value|
     value.find do
       value[:players].each do |element|
 
@@ -214,7 +214,7 @@ end
 
 def big_shoe_rebounds
   shoe_rebounds = []
-  game_hash.each do |key_home, value|
+  game_hash.each do |key, value|
     value.find do
       value[:players].each do |element|
 
